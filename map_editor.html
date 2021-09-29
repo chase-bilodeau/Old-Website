@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <title>Penn Pollution Project - Map Editor</title>
+    <link rel="shortcut icon" href="icon_2.ico" />
+    <link rel = "stylesheet" href = "Css.css">
+  </head>
+  <body class="noScroll">
+    <header>
+      <img class="logo" src = "logo2.png">
+      <p class="header_page">Report Pollution</p>
+      <p id="header_quote"></p>
+      <script src="rand_quote.js"></script>
+      <img class="settings_gear" src="settings.png">
+      <img class="profile" src="profile_pic.png">
+    </header>
+    <aside>
+      <br/>
+      <p class="aside_link"><a href="index.html">Home</a></p>
+      <br/>
+      <p class="aside_link_now"><a href="map.html">Pollution<br/>Map</a></p>
+      <br/>
+      <p class="aside_link"><a href="news.html">News</a></p>
+      <br/>
+      <p class="aside_link"><a href="events.html">Events</a></p>
+      <br/>
+      <p class="aside_link"><a href="rewards.html">Rewards</a></p>
+      <br/>
+      <p class="aside_link"><a href="about.html">About Us</a></p>
+      <br/>
+      <p class="aside_link"><a href="help.html">Help</a></p>
+      <br/>
+    </aside>
+    <div class="body_div">
+      <article>
+        <canvas id = "canvas"></canvas>
+        <iframe class = "google_map" src="https://www.google.com/maps/d/u/0/embed?mid=1jvltN3Qlb7QhFDGNF-Wmy3nOQzJZtK0f"></iframe>
+        <form class="map_form">
+          <p>To submit a polluted area:<br/><br/>
+            <ul>
+              <li>Zoom in to the area you want to mark</li>
+              <li>Hit the "Canvas" button and then outline the area with the color that corresponds to the severity of the pollution in the area (or area<em><u>s</u></em> if the places are closely related)</li>
+              <li>Fill out the information below</li>
+              <li>Hit the Submit button and your report will be reviewed and published</li>
+            </ul><br/><br/>
+          </p>
+          <p>1. What type / types of polution are in this area?</p><br/>
+          <p>
+            <input type="checkbox" name="pollution_type" value="land_litter" >Litter / Trash on Land<br/>
+            <input type="checkbox" name="pollution_type" value="water_litter" >Litter / Trash in Water<br/>
+            <input type="checkbox" name="pollution_type" value="water_oil" >Oil Spill in Water<br/>
+            <input type="checkbox" name="pollution_type" value="water_wastewater" >Wastewater<br/>
+            <input type="checkbox" name="pollution_type" value="other" ><input type="text" placeholder="Other"><br/>
+          </p><br/><br/>
+          <p>2. Upload a minimum of three photos of the polluted area including examples of the pollution that must be cleaned.</p><br/>
+          <input type="file" value="pictures" multiple required><br/><br/><br/>
+          <p>3. What is the area's name and what town is it in?</p><br/>
+          <input type="text" required placeholder="Area Town">
+          <input type="text" required placeholder="Area Name"><br/><br/><br/>
+          <p>4. Submit after you have circle the correct area on the map, and filled out the above information</p><br/>
+          <a href="thanks.html"><input type="button" value="Submit" required></a>
+        </form>
+        <br/><br/>
+        <button id="severe">Severe</button>
+        <button id="moderate">Moderate</button>
+        <button id="mild">Mild</button>
+        <button id="clear">Clear</button>
+        <button id="switch">Canvas</button>
+        <script src="map_canvas.js"></script>
+        <br/>
+      </article>
+    </div>
+  </body>
+</html>
